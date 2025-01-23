@@ -6,3 +6,8 @@ wave
 streamlit
 PyPDF2
 speech_recognition
+textblob
+soundfile
+pandas
+faiss
+sentence_transformers
