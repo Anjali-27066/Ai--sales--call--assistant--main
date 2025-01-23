@@ -1,0 +1,8 @@
+pyaudio
+requests
+gspread
+oauth2client
+wave
+streamlit
+PyPDF2
+speech_recognition
