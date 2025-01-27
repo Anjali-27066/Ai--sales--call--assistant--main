@@ -29,7 +29,7 @@ scope = [
     "https://spreadsheets.google.com/feeds",
     "https://www.googleapis.com/auth/drive"
 ]
-credentials_path = r"C:\Users\anjali\Desktop\infosys project\google_service_account.json"
+credentials_path ="credentials_path"
 credentials = ServiceAccountCredentials.from_json_keyfile_name(credentials_path, scope)
 gc = gspread.authorize(credentials)
 
