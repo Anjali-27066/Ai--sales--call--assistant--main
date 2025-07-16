@@ -93,6 +93,8 @@ The Real-Time AI Sales Call Assistant leverages a combination of speech recognit
 
 ## Output
 <img src="Screenshot 2025-07-16 193214.png"/>
+<img src="Screenshot 2025-07-16 193310.png"/>
+<img src="Screenshot 2025-07-16 193327.png"/>
 
 ## Insights and Learning
 
