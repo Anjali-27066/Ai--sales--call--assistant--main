@@ -91,6 +91,9 @@ The Real-Time AI Sales Call Assistant leverages a combination of speech recognit
 - **Data Storage:** Google Sheets for storing and retrieving call data.
 - **Dashboard:** Streamlit for visualizing call summaries and sentiment analysis.
 
+## Output
+<img src="Screenshot 2025-07-16 193214.png"/>
+
 ## Insights and Learning
 
 Adopting a sailboat perspective, the project journey can be summarized as follows:
