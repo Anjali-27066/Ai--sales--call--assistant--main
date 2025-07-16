@@ -14,7 +14,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-product_recommender = ProductRecommender(r"C:\Users\shaik\Downloads\Sales Calls Transcriptions - Sheet2.csv")
+product_recommender = ProductRecommender(r"C:\Users\anjali\Downloads\AI-Sales-Call-Assistant--main (1)\AI-Sales-Call-Assistant--main\data\recommendations.csv")
 
 huggingface_api_key = config["huggingface_api_key"]
 login(token=huggingface_api_key)
@@ -62,7 +62,6 @@ def analyze_sentiment(text):
         
         print(f"Sentiment Analysis Result: {result}")
         
-        # Map raw labels to sentiments
         sentiment_map = {
             'Very Negative': "NEGATIVE",
             'Negative': "NEGATIVE",
@@ -85,8 +84,8 @@ def transcribe_with_chunks(objections_dict):
     current_chunk = []
     chunk_start_time = time.time()
 
-    objection_handler = ObjectionHandler(r"C:\Users\shaik\Downloads\Sales Calls Transcriptions - Sheet3.csv")
-    product_recommender = ProductRecommender(r"C:\Users\shaik\Downloads\Sales Calls Transcriptions - Sheet2.csv")
+    objection_handler = ObjectionHandler(r"C:\Users\anjali\Downloads\AI-Sales-Call-Assistant--main (1)\AI-Sales-Call-Assistant--main\data\objections.csv")
+    product_recommender = ProductRecommender(r"C:\Users\anjali\Downloads\AI-Sales-Call-Assistant--main (1)\AI-Sales-Call-Assistant--main\data\recommendations.csv")
 
     model = SentenceTransformer('all-MiniLM-L6-v2')
 
@@ -153,7 +152,7 @@ def transcribe_with_chunks(objections_dict):
     return chunks
 
 if __name__ == "__main__":
-    objections_file_path = r"C:\Users\shaik\Downloads\Sales Calls Transcriptions - Sheet3.csv"
+    objections_file_path = r"C:\Users\anjali\Downloads\AI-Sales-Call-Assistant--main (1)\AI-Sales-Call-Assistant--main\data\objections.csv"
     objections_dict = load_objections(objections_file_path)
     transcribed_chunks = transcribe_with_chunks(objections_dict)
     print("Final transcriptions and sentiments:", transcribed_chunks)
