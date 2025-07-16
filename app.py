@@ -13,11 +13,12 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-product_titles_df = pd.read_csv(r"C:\Users\shaik\Downloads\Sales Calls Transcriptions - Sheet2.csv")
+product_titles_df = pd.read_csv(r"C:\Users\anjali\Downloads\AI-Sales-Call-Assistant--main (1)\AI-Sales-Call-Assistant--main\data\recommendations.csv")
 product_titles = product_titles_df['product_title'].tolist()
 
-product_recommender = ProductRecommender(r"C:\Users\shaik\Downloads\Sales Calls Transcriptions - Sheet2.csv")
-objection_handler = ObjectionHandler(r"C:\Users\shaik\Downloads\Sales Calls Transcriptions - Sheet3.csv")
+product_recommender = ProductRecommender(r"C:\Users\anjali\Downloads\AI-Sales-Call-Assistant--main (1)\AI-Sales-Call-Assistant--main\data\recommendations.csv")
+objection_handler = ObjectionHandler(r"C:\Users\anjali\Downloads\AI-Sales-Call-Assistant--main (1)\AI-Sales-Call-Assistant--main\data\objections.csv")
+
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
 def generate_comprehensive_summary(chunks):
