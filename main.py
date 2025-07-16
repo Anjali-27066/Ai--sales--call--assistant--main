@@ -6,10 +6,12 @@ from objection_handler import ObjectionHandler, load_objections
 from sentence_transformers import SentenceTransformer
 
 def main():
-    objections_file_path = r"C:\Users\shaik\Downloads\Sales Calls Transcriptions - Sheet3.csv"
+    objections_file_path = r"C:\Users\anjali\Downloads\AI-Sales-Call-Assistant--main (1)\AI-Sales-Call-Assistant--main\data\objections.csv"
+    recommendations_file_path = r"C:\Users\anjali\Downloads\AI-Sales-Call-Assistant--main (1)\AI-Sales-Call-Assistant--main\data\recommendations.csv"
+    
     objections_dict = load_objections(objections_file_path)
 
-    product_recommender = ProductRecommender(r"C:\Users\shaik\Downloads\Sales Calls Transcriptions - Sheet2.csv")
+    product_recommender = ProductRecommender(recommendations_file_path)
     objection_handler = ObjectionHandler(objections_file_path)
     model = SentenceTransformer('all-MiniLM-L6-v2')
 
